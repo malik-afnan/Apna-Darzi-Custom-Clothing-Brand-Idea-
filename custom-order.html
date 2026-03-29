@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Order - ApnaDarzi.pk</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>ApnaDarzi.pk</h1>
+                <p class="tagline">Your Personal Tailor, Online</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="custom-order.html" class="active">Custom Order</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Custom Order Page -->
+    <section class="custom-order-page">
+        <div class="container">
+            <h1 class="page-title">100% Custom Order</h1>
+            <p class="page-subtitle">Describe your dream outfit and we'll make it happen</p>
+
+            <div class="custom-order-wrapper">
+                <form class="custom-order-form" id="customOrderForm">
+                    <!-- Personal Information -->
+                    <div class="form-section">
+                        <h2>Your Information</h2>
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <!-- Dress Details -->
+                    <div class="form-section">
+                        <h2>Dress Details</h2>
+                        <div class="form-group">
+                            <label for="gender">Gender *</label>
+                            <select id="gender" name="gender" class="form-control" required>
+                                <option value="">Select</option>
+                                <option value="men">Men</option>
+                                <option value="women">Women</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dressType">Dress Type *</label>
+                            <select id="dressType" name="dressType" class="form-control" required>
+                                <option value="">Select type</option>
+                                <option value="shalwar-kameez">Shalwar Kameez</option>
+                                <option value="formal">Formal Wear</option>
+                                <option value="casual">Casual Wear</option>
+                                <option value="party">Party Wear</option>
+                                <option value="traditional">Traditional</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="fabricColor">Fabric Color Preference</label>
+                            <input type="text" id="fabricColor" name="fabricColor" class="form-control" placeholder="e.g., Navy blue, Maroon, etc.">
+                        </div>
+                        <div class="form-group">
+                            <label for="stitchingStyle">Stitching Style Description *</label>
+                            <textarea id="stitchingStyle" name="stitchingStyle" class="form-control" rows="5" required placeholder="Describe your dream outfit in detail. What style do you want? Any specific design elements, patterns, or details?"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Budget Range (Optional)</label>
+                            <select id="budget" name="budget" class="form-control">
+                                <option value="">Select budget range</option>
+                                <option value="5000-10000">PKR 5,000 - 10,000</option>
+                                <option value="10000-20000">PKR 10,000 - 20,000</option>
+                                <option value="20000-30000">PKR 20,000 - 30,000</option>
+                                <option value="30000+">PKR 30,000+</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Reference Images -->
+                    <div class="form-section">
+                        <h2>Reference Images</h2>
+                        <div class="form-group">
+                            <label for="referenceImages">Upload Design References (Optional)</label>
+                            <input type="file" id="referenceImages" name="referenceImages" class="form-control" accept="image/*" multiple>
+                            <small>You can upload multiple images to show us what you want</small>
+                        </div>
+                    </div>
+
+                    <!-- Measurements -->
+                    <div class="form-section">
+                        <h2>Measurements</h2>
+                        <div class="form-group">
+                            <label>Measurement Option *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="measurementOption" value="enter" checked>
+                                    <span>I will enter my measurements</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="measurementOption" value="assistance">
+                                    <span>I need tailor assistance</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="measurementsGroup">
+                            <div class="form-group">
+                                <label>Measurements (in inches)</label>
+                                <div class="measurement-grid">
+                                    <div class="measurement-field">
+                                        <label for="customChest">Chest</label>
+                                        <input type="number" id="customChest" name="customChest" class="form-control" placeholder="e.g., 38">
+                                    </div>
+                                    <div class="measurement-field">
+                                        <label for="customWaist">Waist</label>
+                                        <input type="number" id="customWaist" name="customWaist" class="form-control" placeholder="e.g., 32">
+                                    </div>
+                                    <div class="measurement-field">
+                                        <label for="customShoulder">Shoulder</label>
+                                        <input type="number" id="customShoulder" name="customShoulder" class="form-control" placeholder="e.g., 18">
+                                    </div>
+                                    <div class="measurement-field">
+                                        <label for="customSleeve">Sleeve Length</label>
+                                        <input type="number" id="customSleeve" name="customSleeve" class="form-control" placeholder="e.g., 24">
+                                    </div>
+                                    <div class="measurement-field">
+                                        <label for="customShirtLength">Shirt Length</label>
+                                        <input type="number" id="customShirtLength" name="customShirtLength" class="form-control" placeholder="e.g., 30">
+                                    </div>
+                                    <div class="measurement-field">
+                                        <label for="customTrouserLength">Trouser Length</label>
+                                        <input type="number" id="customTrouserLength" name="customTrouserLength" class="form-control" placeholder="e.g., 40">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Notes -->
+                    <div class="form-section">
+                        <div class="form-group">
+                            <label for="additionalNotes">Any Additional Notes or Special Requirements</label>
+                            <textarea id="additionalNotes" name="additionalNotes" class="form-control" rows="4" placeholder="Any other details you'd like to share..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-large">Submit Custom Order Request</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Message Modal -->
+    <div id="successModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Thank You!</h2>
+            <p>Your custom order request has been submitted successfully. Our team will contact you shortly to discuss your dream outfit.</p>
+            <button class="btn btn-primary" onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ApnaDarzi.pk</h3>
+                    <p>Your Personal Tailor, Online</p>
+                    <p>Custom stitched clothes made just for you in Pakistan.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="custom-order.html">Custom Order</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@apnaderzi.pk</p>
+                    <p>Phone: +92 XXX XXXXXXX</p>
+                    <p>WhatsApp: +92 XXX XXXXXXX</p>
+                    <p>Location: Pakistan</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ApnaDarzi.pk. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
