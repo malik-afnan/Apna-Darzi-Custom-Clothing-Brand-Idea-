@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Order - ApnaDarzi.pk</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>ApnaDarzi.pk</h1>
+                <p class="tagline">Your Personal Tailor, Online</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="custom-order.html">Custom Order</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Detail Page -->
+    <section class="product-detail-page">
+        <div class="container">
+            <div class="product-detail-wrapper">
+                <!-- Product Image -->
+                <div class="product-image-large">
+                    <img id="productImage" src="https://via.placeholder.com/500x600/8B4513/FFFFFF?text=Product+Image" alt="Product">
+                </div>
+
+                <!-- Product Info & Form -->
+                <div class="product-info-form">
+                    <h1 id="productName">Product Name</h1>
+                    <p id="productDescription" class="product-description">Product description will appear here.</p>
+                    <p id="productFabric" class="product-fabric">Fabric details available upon selection.</p>
+
+                    <!-- Customization Form -->
+                    <form class="customization-form" id="customizationForm">
+                        <h2>Customize Your Order</h2>
+
+                        <!-- Size Type Selection -->
+                        <div class="form-group">
+                            <label>Size Type</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="sizeType" value="standard" checked>
+                                    <span>Standard Size (S, M, L, XL)</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="sizeType" value="custom">
+                                    <span>Custom Measurements</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Standard Size Selection -->
+                        <div class="form-group" id="standardSizeGroup">
+                            <label for="standardSize">Select Size</label>
+                            <select id="standardSize" name="standardSize" class="form-control">
+                                <option value="">Choose size</option>
+                                <option value="S">Small (S)</option>
+                                <option value="M">Medium (M)</option>
+                                <option value="L">Large (L)</option>
+                                <option value="XL">Extra Large (XL)</option>
+                            </select>
+                        </div>
+
+                        <!-- Custom Measurements -->
+                        <div class="form-group" id="customMeasurementsGroup" style="display: none;">
+                            <label>Custom Measurements (in inches)</label>
+                            <div class="measurement-grid">
+                                <div class="measurement-field">
+                                    <label for="chest">Chest</label>
+                                    <input type="number" id="chest" name="chest" class="form-control" placeholder="e.g., 38">
+                                </div>
+                                <div class="measurement-field">
+                                    <label for="waist">Waist</label>
+                                    <input type="number" id="waist" name="waist" class="form-control" placeholder="e.g., 32">
+                                </div>
+                                <div class="measurement-field">
+                                    <label for="shoulder">Shoulder</label>
+                                    <input type="number" id="shoulder" name="shoulder" class="form-control" placeholder="e.g., 18">
+                                </div>
+                                <div class="measurement-field">
+                                    <label for="sleeveLength">Sleeve Length</label>
+                                    <input type="number" id="sleeveLength" name="sleeveLength" class="form-control" placeholder="e.g., 24">
+                                </div>
+                                <div class="measurement-field">
+                                    <label for="shirtLength">Shirt Length</label>
+                                    <input type="number" id="shirtLength" name="shirtLength" class="form-control" placeholder="e.g., 30">
+                                </div>
+                                <div class="measurement-field">
+                                    <label for="trouserLength">Trouser Length</label>
+                                    <input type="number" id="trouserLength" name="trouserLength" class="form-control" placeholder="e.g., 40">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Color Selection -->
+                        <div class="form-group">
+                            <label for="color">Fabric Color</label>
+                            <select id="color" name="color" class="form-control" required>
+                                <option value="">Choose color</option>
+                                <option value="white">White</option>
+                                <option value="black">Black</option>
+                                <option value="navy">Navy Blue</option>
+                                <option value="maroon">Maroon</option>
+                                <option value="beige">Beige</option>
+                                <option value="gray">Gray</option>
+                                <option value="brown">Brown</option>
+                                <option value="green">Green</option>
+                                <option value="red">Red</option>
+                                <option value="blue">Blue</option>
+                                <option value="custom">Custom Color (specify in notes)</option>
+                            </select>
+                        </div>
+
+                        <!-- Additional Notes -->
+                        <div class="form-group">
+                            <label for="notes">Additional Notes</label>
+                            <textarea id="notes" name="notes" class="form-control" rows="4" placeholder="Any special requirements or preferences..."></textarea>
+                        </div>
+
+                        <!-- Reference Image Upload -->
+                        <div class="form-group">
+                            <label for="referenceImage">Upload Reference Image (Optional)</label>
+                            <input type="file" id="referenceImage" name="referenceImage" class="form-control" accept="image/*">
+                            <small>Upload a photo of the design you want</small>
+                        </div>
+
+                        <!-- Customer Information -->
+                        <div class="form-section">
+                            <h3>Your Information</h3>
+                            <div class="form-group">
+                                <label for="customerName">Full Name *</label>
+                                <input type="text" id="customerName" name="customerName" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="customerEmail">Email *</label>
+                                <input type="email" id="customerEmail" name="customerEmail" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="customerPhone">Phone Number *</label>
+                                <input type="tel" id="customerPhone" name="customerPhone" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary btn-large">Submit Order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Message Modal -->
+    <div id="successModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Order Submitted Successfully!</h2>
+            <p>Thank you for your order. Our team will contact you shortly to confirm the details.</p>
+            <button class="btn btn-primary" onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ApnaDarzi.pk</h3>
+                    <p>Your Personal Tailor, Online</p>
+                    <p>Custom stitched clothes made just for you in Pakistan.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="custom-order.html">Custom Order</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@apnaderzi.pk</p>
+                    <p>Phone: +92 XXX XXXXXXX</p>
+                    <p>WhatsApp: +92 XXX XXXXXXX</p>
+                    <p>Location: Pakistan</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ApnaDarzi.pk. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
